@@ -1,0 +1,46 @@
+<h1>May 2025 পর্যন্ত Due List</h1>
+<input type="number" id="rollInput" placeholder="Roll Number দিন">
+<button onclick="checkDue()">খুঁজুন</button>
+<div id="result"></div>
+
+<script>
+  const students = {
+    1: { name: "Sanchita Maji", due: 2 },
+    2: { name: "Anusua Patra", due: 4 },
+    3: { name: "Ankita Konar", due: 1 },
+    4: { name: "Subhajit Patra", due: 4 },
+    5: { name: "Gobinda Konar", due: 1 },
+    6: { name: "Samanwita Patra", due: 1 },
+    7: { name: "Asha Ghosh", due: 1 },
+    8: { name: "Debjit Patra", due: 1 },
+    9: { name: "Souvik Ghosh", due: 2 },
+    10: { name: "Subhajit Kumbhakar", due: 2 },
+    11: { name: "Ankita Patra", due: 1 },
+    12: { name: "Piu Hazra", due: 1 },
+    13: { name: "Mausumi Patra", due: 5 },
+    14: { name: "Sanchita Patra", due: 3 },
+    15: { name: "Rajkrishna Kalendi", due: 5 },
+    16: { name: "Bristi Konar", due: 2 },
+    17: { name: "Priyanka Ghosh", due: 6 },
+    18: { name: "Akash Ghosh", due: 4 },
+    19: { name: "Soumili Das", due: 2 },
+    20: { name: "Saibal Patra", due: 1 },
+    21: { name: "Partha Bauri", due: 5 },
+    22: { name: "Gouranga Ghosh", due: 2 },
+    23: { name: "Sathi Mandal", due: 1 },
+    24: { name: "Srabani Panda", due: 7 },
+    25: { name: "Santanu Sardar", due: 2 },
+    26: { name: "Abhijit Sardar", due: 2 }
+  };
+
+  function checkDue() {
+    const roll = document.getElementById("rollInput").value;
+    const student = students[roll];
+    const resultDiv = document.getElementById("result");
+    if (student) {
+      resultDiv.innerHTML = `নাম: <strong>${student.name}</strong><br>বকেয়া: <strong>${student.due}</strong> মাস`;
+    } else {
+      resultDiv.innerHTML = "এই রোল নাম্বারে কোনো তথ্য পাওয়া যায়নি।";
+    }
+  }
+</script>
